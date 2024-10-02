@@ -1,0 +1,22 @@
+name: Mirroring
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+  mirroring:
+    runs-on: [Linux, self-hosted]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: Sinan-Karakaya/eip-orga-mirror@a625992b402623b1ad0a54d7eebb06fa9501feb6
+        with:
+          target_repo_url:
+            git@github.com:Sinan-Karakaya/test_push_target
+          target_subdirectory:
+            backend
+          ssh_private_key:
+            ${{ secrets.SSH_PRIVATE_KEY }}
