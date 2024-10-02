@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: Sinan-Karakaya/eip-orga-mirror@8cafe7e3b2e00cab4bf899809493b7c4d39a453a
+      - uses: Sinan-Karakaya/eip-orga-mirror@06e00a218cb5cc9f492886a321940d5ff60c6d1c
         with:
           target_repo_url:
             git@github.com:Sinan-Karakaya/test_push_target
