@@ -15,7 +15,7 @@ jobs:
       - uses: Sinan-Karakaya/eip-orga-mirror@2837dfcb286a14b8411cbf6f05bb942bc146b767
         with:
           target_repo_url:
-            git@github.com:Sinan-Karakaya/test_push_target
+            git@github.com:Sinan-Karakaya/test_push_target.git
           target_subdirectory:
             backend
           ssh_private_key:
