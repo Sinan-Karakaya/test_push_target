@@ -17,6 +17,8 @@ jobs:
 
     - name: Convert submodules to regular directories
       run: |
+        git config --global user.email "robot@localz.fr"
+        git config --global user.name "Localz's Bot"
         git submodule deinit -f --all
         rm -rf .git/modules/*
         for module in $(git config --file .gitmodules --name-only --get-regexp path | sed 's/submodule\.//g' | sed 's/\.path//g'); do
