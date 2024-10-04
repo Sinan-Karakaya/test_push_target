@@ -1,22 +1,36 @@
-name: Mirroring
+name: Mirror Repo Without Submodules
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-  mirroring:
-    runs-on: ubuntu-latest
+  mirror:
+    runs-on: [self-hosted, linux, localz]
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: Sinan-Karakaya/eip-orga-mirror@0a13fa4b4c84be527ca8b7a8d060d488cc2f79d5
-        with:
-          target_repo_url:
-            git@github.com:Sinan-Karakaya/test_push_target.git
-          target_subdirectory:
-            backend
-          ssh_private_key:
-            ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Checkout repository with submodules
+      uses: actions/checkout@v4.2.0
+      with:
+        submodules: true
+
+    - name: Convert submodules to regular directories
+      run: |
+        # Loop through each submodule and make it a normal directory
+        git submodule deinit -f --all       # Deinitialize all submodules
+        rm -rf .git/modules/*               # Remove submodule references from the Git configuration
+        git rm --cached $(git submodule--helper list | awk '{ print $2 }')  # Remove cached submodule paths from git
+        git add .                           # Add files from the submodules into the main repo
+
+    - name: Commit converted submodules
+      run: |
+        git commit -m "Convert submodules to regular directories"
+
+    - name: Mirror repo
+      uses: pixta-dev/repository-mirroring-action@v1
+      with:
+        target_repo_url:
+          git@github.com:Sinan-Karakaya/test_push_target.git
+        ssh_private_key:
+          ${{ secrets.SSH_PRIVATE_KEY }}
