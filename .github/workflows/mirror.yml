@@ -30,9 +30,10 @@ jobs:
       run: |
         git commit -m "Convert submodules to regular directories"
 
-    - name: Mirror repo
-      run: |
-        echo ${{ secrets.SSH_PRIVATE_KEY }} > ~/.ssh/id_ed25519
-        export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
-        git remote add mirror git@github.com:Sinan-Karakaya/test_push_target.git
-        git push --mirror mirror
+    - name: Mirror
+      uses: Sinan-Karakaya/eip-orga-mirror@latest
+      with:
+        target_repo_url:
+          git@github.com:Sinan-Karakaya/test_push_target.git
+        ssh_private_key:
+          ${{ secrets.SSH_PRIVATE_KEY }}
