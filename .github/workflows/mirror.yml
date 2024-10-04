@@ -32,5 +32,7 @@ jobs:
 
     - name: Mirror repo
       run: |
+        echo ${{ secrets.SSH_PRIVATE_KEY }} > ~/.ssh/id_ed25519
+        export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
         git remote add mirror git@github.com:Sinan-Karakaya/test_push_target.git
         git push --mirror mirror
