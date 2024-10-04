@@ -7,7 +7,7 @@ on:
 
 jobs:
   mirror:
-    runs-on: [self-hosted, linux, localz]
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository with submodules
