@@ -31,9 +31,6 @@ jobs:
         git commit -m "Convert submodules to regular directories"
 
     - name: Mirror repo
-      uses: pixta-dev/repository-mirroring-action@v1
-      with:
-        target_repo_url:
-          git@github.com:Sinan-Karakaya/test_push_target.git
-        ssh_private_key:
-          ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        git remote add mirror git@github.com:Sinan-Karakaya/test_push_target.git
+        git push --mirror mirror
