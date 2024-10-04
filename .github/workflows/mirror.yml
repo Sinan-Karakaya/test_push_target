@@ -19,7 +19,9 @@ jobs:
       run: |
         git submodule deinit -f --all
         rm -rf .git/modules/*
-        git rm --cached $(git submodule--helper list | awk '{ print $2 }')
+        for module in $(git config --file .gitmodules --name-only --get-regexp path | sed 's/submodule\.//g' | sed 's/\.path//g'); do
+          git rm --cached $(git config --file .gitmodules --get submodule.$module.path)
+        done
         git add .
 
     - name: Commit converted submodules
