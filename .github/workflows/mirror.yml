@@ -17,11 +17,10 @@ jobs:
 
     - name: Convert submodules to regular directories
       run: |
-        # Loop through each submodule and make it a normal directory
-        git submodule deinit -f --all       # Deinitialize all submodules
-        rm -rf .git/modules/*               # Remove submodule references from the Git configuration
-        git rm --cached $(git submodule--helper list | awk '{ print $2 }')  # Remove cached submodule paths from git
-        git add .                           # Add files from the submodules into the main repo
+        git submodule deinit -f --all
+        rm -rf .git/modules/*
+        git rm --cached $(git submodule--helper list | awk '{ print $2 }')
+        git add .
 
     - name: Commit converted submodules
       run: |
