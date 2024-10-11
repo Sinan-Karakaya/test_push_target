@@ -16,7 +16,7 @@ jobs:
         submodules: true
 
     - name: Convert submodules to regular directories
-      uses: Sinan-Karakaya/orga-to-monorepo-action@838c60e741cce91c5731703790fbfab3b530d085
+      uses: Sinan-Karakaya/orga-to-monorepo-action@f482c2a3ec34d09198a42a88631912081b29ec52
       with:
         target_monorepo_url: git@github.com:Sinan-Karakaya/test_push_target.git
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
