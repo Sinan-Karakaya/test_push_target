@@ -20,4 +20,3 @@ jobs:
       with:
         target_monorepo_url: git@github.com:Sinan-Karakaya/test_push_target.git
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh_username: "Localz Bot"
