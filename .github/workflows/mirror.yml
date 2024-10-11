@@ -16,30 +16,8 @@ jobs:
         submodules: true
 
     - name: Convert submodules to regular directories
-      run: |
-        git config --global user.email "bot@localz.fr"
-        git config --global user.name "Localz's Bot"
-        git submodule update --recursive --remote
-        git submodule deinit -f --all
-        rm -rf .git/modules/*
-        for module in $(git config --file .gitmodules --name-only --get-regexp path | sed 's/submodule\.//g' | sed 's/\.path//g'); do
-          git rm --cached $(git config --file .gitmodules --get submodule.$module.path)
-        done
-        git add .
-
-    - name: Commit converted submodules
-      run: |
-        git commit -m "Convert submodules to regular directories"
-        touch ~/.ssh/id_ed25519
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-        export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
-        git remote add mirror git@github.com:Sinan-Karakaya/test_push_target.git
-        git push --tags --force mirror
-        
-#    - name: Mirror
- #     uses: pixta-dev/repository-mirroring-action@v1
-  #    with:
-   #     target_repo_url:
-    #      git@github.com:Sinan-Karakaya/test_push_target.git
-     #   ssh_private_key:
-      #    ${{ secrets.SSH_PRIVATE_KEY }}
+      uses: Sinan-Karakaya/orga-to-monorepo-action@838c60e741cce91c5731703790fbfab3b530d085
+      with:
+        target_monorepo_url: git@github.com:Sinan-Karakaya/test_push_target.git
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh_username: "Localz Bot"
