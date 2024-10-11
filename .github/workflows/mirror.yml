@@ -17,8 +17,9 @@ jobs:
 
     - name: Convert submodules to regular directories
       run: |
-        git config --global user.email "robot@localz.fr"
+        git config --global user.email "bot@localz.fr"
         git config --global user.name "Localz's Bot"
+        git submodule update --recursive --remote
         git submodule deinit -f --all
         rm -rf .git/modules/*
         for module in $(git config --file .gitmodules --name-only --get-regexp path | sed 's/submodule\.//g' | sed 's/\.path//g'); do
@@ -29,11 +30,14 @@ jobs:
     - name: Commit converted submodules
       run: |
         git commit -m "Convert submodules to regular directories"
-
-    - name: Mirror
-      uses: pixta-dev/repository-mirroring-action@v1
-      with:
-        target_repo_url:
-          git@github.com:Sinan-Karakaya/test_push_target.git
-        ssh_private_key:
-          ${{ secrets.SSH_PRIVATE_KEY }}
+        echo ${{ secrets.SSH_PRIVATE_KEY }} > ~/.ssh/id_ed25519
+        git remote add mirror git@github.com:Sinan-Karakaya/test_push_target.git
+        git push --tags --force mirror
+        
+#    - name: Mirror
+ #     uses: pixta-dev/repository-mirroring-action@v1
+  #    with:
+   #     target_repo_url:
+    #      git@github.com:Sinan-Karakaya/test_push_target.git
+     #   ssh_private_key:
+      #    ${{ secrets.SSH_PRIVATE_KEY }}
