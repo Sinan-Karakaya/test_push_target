@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "689a3c9ae8bcb3f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "c2c6d5e303f14a83",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03b9a19716851d24",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projet Ideas/Writer's table.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "189240e5244e07bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projet Ideas/Arc mobile clone.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "405e0bb2825b5ceb",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e811921e32de14d0",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "a16d21a5cde6628a",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "a379119136880c39",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "dbcde2cee9c70d86",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      },
+      {
+        "id": "aace1eb64e6f7e3b",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "495a23cee4736173",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "df33750a9457e696",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Projet Ideas/Arc mobile clone.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "431e73d7025b8969",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Projet Ideas/Arc mobile clone.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "c5b3e9f6daab137e",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Projet Ideas/Arc mobile clone.md"
+          }
+        }
+      },
+      {
+        "id": "075a37dbe7c7739f",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "publish:Publish changes...": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "189240e5244e07bd",
+  "lastOpenFiles": [
+    "Projet Ideas/Writer's table.md",
+    "Projet Ideas/Arc mobile clone.md",
+    "Machine Learning/101/MAGIC ML.md",
+    "Untitled",
+    "Projet Ideas",
+    "YT/Strlen pushswap/Notes.md",
+    "YT/NULL speed/Notes.md",
+    "YT/Ideas.md",
+    "CosmosEngine/CosmosRenderer/Vulkan study and tests.md",
+    "/YT/Strlen pushswap/Notes.md",
+    "/YT/NULL speed/Notes.md",
+    "/YT/Ideas.md",
+    "/CosmosEngine/CosmosRenderer/Vulkan study and tests.md",
+    "YT/Strlen pushswap",
+    "YT/NULL speed",
+    "YT",
+    "CosmosEngine/CosmosRenderer",
+    "CosmosEngine",
+    "/YT/Strlen pushswap",
+    "/YT/NULL speed",
+    "/YT",
+    "Machine Learning/102/4 - Neural networks.md",
+    "Machine Learning/To Dive Deeper/Receiver Operating Characteristics.md",
+    "Machine Learning/To Dive Deeper/Inductive or Deductive Reasoning.md",
+    "Machine Learning/To Dive Deeper/Decision Tree & Random Forest.md",
+    "Machine Learning/102/Supervised Learning - Regression.md",
+    "Machine Learning/102/5 - Linear Regression.md",
+    "Machine Learning/102/3 - Support vector machine.md",
+    "Machine Learning/102/2 - Logistic Regression.md",
+    "Machine Learning/102/1 - Naive Bayes.md",
+    "Machine Learning/To Dive Deeper/SMOTE-NC.md",
+    "Machine Learning/To Dive Deeper/SMOTE (Synthetic Minority Oversampling Technique).md",
+    "Machine Learning/OVH - Entretien.md",
+    "Machine Learning/To Dive Deeper/Assets/Pasted image 20231123213150.png",
+    "Machine Learning/To Dive Deeper/Assets/Pasted image 20231123220042.png",
+    "/Machine Learning/To Dive Deeper/SMOTE-NC.md",
+    "/Machine Learning/To Dive Deeper/SMOTE (Synthetic Minority Oversampling Technique).md",
+    "/Machine Learning/To Dive Deeper/Receiver Operating Characteristics.md",
+    "/Machine Learning/To Dive Deeper/Assets/Pasted image 20231123220042.png",
+    "/Machine Learning/To Dive Deeper/Assets/Pasted image 20231123213150.png",
+    "Machine Learning/103/Assets/Pasted image 20231122164750.png",
+    "Machine Learning/103/Assets/Pasted image 20231122164123.png",
+    "Machine Learning/103/Assets/Pasted image 20231122164118.png",
+    "Machine Learning/103/Assets/Pasted image 20231122163211.png",
+    "Machine Learning/103/Assets/Pasted image 20231122163201.png",
+    "Machine Learning/103/Assets/Pasted image 20231122163143.png"
+  ]
+}
